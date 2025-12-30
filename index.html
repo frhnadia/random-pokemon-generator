@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Pokémon Generator</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+<style>
+    body{
+        background-color: aliceblue;
+        min-height: 100vh;
+        transition: background 0.5s ease;
+    }
+    .pokemon-img, .image2 {
+        width: 200px;
+        height: 200px;
+    }
+    .stat {
+        margin-bottom: 8px;
+    }
+    .stat-bar-bg {
+        background: #e0e0e0;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 10px;
+    }
+    .stat-bar {
+    height: 10px;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+</style>
+<body id="page">
+   <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div id="card" class="card shadow-lg text-center p-4" style="width: 24rem;">
+            <h3 class="mb-3">Random Pokémon</h3> 
+
+            <div id="loading" class="my-3 d-none">
+                <div class="spinner-border text-primary"></div>
+            </div>
+
+            <img id="image" class="pokemon-img mx-auto d-none" alt="Pokemon Character">
+
+            <div class="card-body">
+                <h4 id="name" class="text-capitalize"></h4>
+                <div id="types" class="mb-2"></div>
+                <h5 class="fs-6">Abilities</h5>
+                <div id="abilities" class="mb-2 text-capitalize"></div>
+                <button id="cryBtn" class="btn btn-outline-secondary btn-sm mb-3">Play Cry</button>
+                <button id="randomBtn" class="btn btn-primary w-100">Get Random  Pokémon</button>
+            </div>
+        </div>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
